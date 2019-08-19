@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { APIService, CreateMyTestModelInput } from './API.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'awsappsync';
+
+  constructor(apiService: APIService) {
+    const allData = apiService.CreateMyTestModel(<CreateMyTestModelInput>{'title': 'Hello, world!'}).then(
+      (response) => {
+        console.log('response >>>', response);
+      }
+    );
+  }
 }

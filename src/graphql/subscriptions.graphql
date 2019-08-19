@@ -1,0 +1,19 @@
+# this is an auto generated file. This will be overwritten
+subscription OnCreateMyTestModel($id: ID, $title: String) {
+  onCreateMyTestModel(id: $id, title: $title) {
+    id
+    title
+  }
+}
+subscription OnUpdateMyTestModel($id: ID, $title: String) {
+  onUpdateMyTestModel(id: $id, title: $title) {
+    id
+    title
+  }
+}
+subscription OnDeleteMyTestModel($id: ID, $title: String) {
+  onDeleteMyTestModel(id: $id, title: $title) {
+    id
+    title
+  }
+}
